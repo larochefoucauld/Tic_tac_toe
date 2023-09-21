@@ -1,5 +1,5 @@
 #include <iostream>
-#include "PrintGameField1.h"
+#include "header.h"
 
 void PrintGameField(int field[3][3])
 {

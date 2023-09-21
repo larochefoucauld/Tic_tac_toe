@@ -1,15 +1,16 @@
 #include <iostream>
+#include "header.h"
 
 void PlayerTurn(int gF[3][3]) {
     int a, b;
-    std::cout << "Сделайте ход, введите координаты ячейки";
+    std::cout << "Your turn\n";
     std::cin >> a >> b;
-    if (a > 3 || b > 3 || a < 1 || b < 1 || gF[a][b] != 0) {
-        std::cout << "Пожалуйста, введите координаты правильно";
+    if (a > 2 || b > 2 || a < 0 || b < 0 || gF[a][b] != 0) {
+        std::cout << "Enter coordinates correctly\n";
         PlayerTurn(gF);
     }
     else {
-        std::cout <<"Спасибо";
+        std::cout <<"Thank you\n";
         gF[a][b] = 1;
     }
 }

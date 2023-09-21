@@ -1,9 +1,8 @@
 #include <iostream>
-
-#include <iostream>
+#include "header.h"
 
 using namespace std;
-int AITurn (int gF[i][j])
+void AITurn (int gF[3][3])
 {
     int l1 = gF[0][0]+gF[0][1]+gF[0][2];
     int l2 = gF[1][0]+gF[1][1]+gF[1][2];
@@ -15,7 +14,7 @@ int AITurn (int gF[i][j])
     int d2 = gF[2][0]+gF[1][1]+gF[0][2];
     int sum = gF[0][0]+gF[0][1]+gF[0][2]+gF[1][0]+gF[1][1]+gF[1][2]+gF[2][0]+gF[2][1]+gF[2][2];
     if ((sum == 1) && (l1 == 1)){
-        gF[1][1] = 4;-
+        gF[1][1] = 4;
     }
     else if ((sum == 1) && (l2 == 1) && ((gF[1][0] == 1) || (gF[1][2] == 1) )){
         gF[1][1] = 4;
@@ -23,7 +22,7 @@ int AITurn (int gF[i][j])
     else if ((sum == 1) && (l2 == 1) && (gF[1][1] == 1)){
         gF[0][0] = 4;
     }
-    else if ((sum == 1) && (l3 == 1) && ){
+    else if ((sum == 1) && (l3 == 1)){
         gF[1][1] = 4;
     }
     else if ((sum == 6) && ((d1 == 6) || (d2 == 6)) && (gF[1][1] == 4)){
@@ -65,16 +64,16 @@ int AITurn (int gF[i][j])
     else if ((sum == 6) && (c3 == 2) && (gF[1][2] == 1) && (gF[0][2] == 0)){
         gF[0][2] = 4;
     }
-    else if((sum == 6) && (d1 == 5) && (gF[2][1] == 1 || gF[1][2] == 1) && (gF[0][0] == 0){
+    else if((sum == 6) && (d1 == 5) && (gF[2][1] == 1 || gF[1][2] == 1) && (gF[0][0] == 0)){
         gF[0][0] = 4;
     }
-    else if((sum == 6) && (d1 == 5) && (gF[2][1] == 1 || gF[1][2] == 1) && (gF[2][2] == 0){
+    else if((sum == 6) && (d1 == 5) && (gF[2][1] == 1 || gF[1][2] == 1) && (gF[2][2] == 0)){
         gF[2][2] = 4;
     }
-    else if((sum == 6) && (d2 == 5) && (gF[1][0] == 1 || gF[2][1] == 1) && (gF[0][2] == 0){
+    else if((sum == 6) && (d2 == 5) && (gF[1][0] == 1 || gF[2][1] == 1) && (gF[0][2] == 0)){
         gF[0][2] = 4;
     }
-    else if((sum == 6) && (d1 == 5) && (gF[1][0] == 1 || gF[2][1] == 1) && (gF[2][0] == 0){
+    else if((sum == 6) && (d1 == 5) && (gF[1][0] == 1 || gF[2][1] == 1) && (gF[2][0] == 0)){
         gF[2][0] = 4;
     }
     else if((sum == 6) && (l2 == 6 || c2 == 6)){
@@ -272,7 +271,7 @@ int AITurn (int gF[i][j])
             for (int m = 0; m < 3; m++){
                 if (gF[n][m] == 0) {
                     gF[n][m] = 4;
-                    t++
+                    t++;
                     break;
                 }
             }
@@ -434,7 +433,7 @@ int AITurn (int gF[i][j])
             for (int m = 0; m < 3; m++){
                 if (gF[n][m] == 0) {
                     gF[n][m] = 4;
-                    t++
+                    t++;
                     break;
                 }
             }
