@@ -10,7 +10,7 @@ void PlayerTurn(int gF[3][3]) {
     }
     else {
         std::cout <<"Спасибо";
-
+        gF[a][b] = 1;
     }
 }
 
